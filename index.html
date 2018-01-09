@@ -11,13 +11,33 @@
             height: 150px;
             width: 150px;
             background: blue;
+            position: absolute;
+            cursor: move;
+            line-height: 150px;
+            text-align: center
+        }
+        #div2 {
+            height: 150px;
+            width: 150px;
+            background: red;
+            position: absolute;
+            top: 180px;
+            cursor: move;
         }
     </style>
 </head>
 
 <body>
-    <div id="div1">拖拽</div>
-    <script src="./drag.js"></script>
+    <div id="div1" class="draggable">
+        模拟拖放
+    </div>
+    <div id="div2"></div>
+    <script type="text/javascript" src="./drag.js"></script>
+    <script type="text/javascript">
+        window.onload = function(){
+            dragDrop.enable()
+        }
+    </script>
 </body>
 
 </html>
